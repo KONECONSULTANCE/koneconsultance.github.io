@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.smk-consulting.com/sitemap.xml
+Sitemap: https://sidiconsulting.org/sitemap.xml
