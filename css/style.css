@@ -172,8 +172,20 @@ button { font-family: inherit; cursor: pointer; }
 }
 .brand {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
   line-height: 1.15;
+}
+.brand-text { display: flex; flex-direction: column; min-width: 0; max-width: 300px; }
+.main-nav a { white-space: nowrap; }
+.brand-logo {
+  height: 48px;
+  width: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 3px 5px;
+  flex: none;
 }
 .brand-name {
   font-family: var(--font-heading);
@@ -902,6 +914,15 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--c-line);
 }
 .footer-brand .brand-name { color: var(--c-white); }
+.footer-logo {
+  display: block;
+  width: 200px;
+  height: auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 8px;
+  margin-bottom: 16px;
+}
 .footer-brand p { color: var(--c-text-soft); font-size: 0.9rem; margin-top: 10px; max-width: 320px; }
 .footer-col h4 {
   color: var(--c-white);
@@ -970,6 +991,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 @media (max-width: 720px) {
+  .brand-title { display: none; }
+  .brand-logo { height: 42px; }
   .section { padding: 68px 0; }
   .card-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
