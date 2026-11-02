@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var BASE = "assets/pcu/photos/";
+  var BASE = "";
   var PHOTOS = [
     { f: "dioila-01-famille-kaladougou", a: "dioila", t: ["famille"], c: "Photo de famille — acteurs de la commune de Kaladougou (atelier de Dioïla)", wide: true },
     { f: "dioila-02-famille-ngaradougou", a: "dioila", t: ["famille"], c: "Photo de famille — acteurs de la commune de N'Garadougou (atelier de Dioïla)", wide: true },
