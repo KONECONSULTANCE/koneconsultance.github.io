@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="pcu.css?v=2">
+<link rel="stylesheet" href="pcu.css?v=3">
 </head>
 <body>
 
@@ -117,7 +117,11 @@
       <div class="hero-photo-wrap">
         <div class="hero-photo">
           <div class="hero-photo-frame">
-            <img src="assets/images/sidi-portrait.jpg" alt="Portrait de Sidi Koné, expert en développement rural et sécurité alimentaire" width="640" height="640">
+            <img class="hero-slide is-active" src="assets/images/sidi-portrait.jpg" alt="Portrait de Sidi Koné, expert en développement rural et sécurité alimentaire" width="640" height="640">
+            <img class="hero-slide" src="sidi-profil-1.webp" alt="Portrait de Sidi Koné, expert en développement rural et sécurité alimentaire" width="800" height="800" loading="lazy">
+            <img class="hero-slide" src="sidi-profil-2.webp" alt="Portrait de Sidi Koné, expert en développement rural et sécurité alimentaire" width="800" height="800" loading="lazy">
+            <img class="hero-slide" src="sidi-profil-3.webp" alt="Portrait de Sidi Koné, expert en développement rural et sécurité alimentaire" width="800" height="800" loading="lazy">
+            <img class="hero-slide" src="sidi-profil-4.webp" alt="Portrait de Sidi Koné, expert en développement rural et sécurité alimentaire" width="800" height="800" loading="lazy">
           </div>
           <span class="hero-photo-badge">28 ans au service du développement, de l'action humanitaire et de la performance des organisations</span>
         </div>
@@ -782,5 +786,30 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function () {
+  var f = document.querySelector(".hero-photo-frame"); if (!f) return;
+  var slides = f.querySelectorAll(".hero-slide"); if (slides.length < 2) return;
+  var dots = document.createElement("div"); dots.className = "hero-dots";
+  var i = 0, t, reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function go(n) {
+    slides[i].classList.remove("is-active"); dots.children[i].classList.remove("is-active");
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add("is-active"); dots.children[i].classList.add("is-active");
+  }
+  slides.forEach(function (s, k) {
+    var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "Photo " + (k + 1));
+    if (k === 0) b.className = "is-active";
+    b.addEventListener("click", function () { go(k); restart(); });
+    dots.appendChild(b);
+  });
+  f.appendChild(dots);
+  function start() { if (!reduce) t = setInterval(function () { go(i + 1); }, 4000); }
+  function restart() { clearInterval(t); start(); }
+  f.addEventListener("mouseenter", function () { clearInterval(t); });
+  f.addEventListener("mouseleave", restart);
+  start();
+})();
+</script>
 </body>
 </html>
