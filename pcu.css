@@ -95,3 +95,13 @@
 .real-points li { background: var(--c-accent-soft); color: var(--c-accent); border-radius: var(--radius-pill); padding: 5px 12px; font-size: .85rem; font-weight: 600; }
 .real-body .pcu-actions { margin-top: 6px; }
 @media (max-width: 860px) { .real-card { grid-template-columns: 1fr; } .real-mosaic { min-height: 240px; } .real-body { padding: 22px; } }
+
+/* Portrait en défilement (accueil) */
+.hero-photo-frame { position: relative; }
+.hero-photo-frame .hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; }
+.hero-photo-frame .hero-slide.is-active { opacity: 1; }
+.hero-photo-frame .hero-slide:first-child { position: relative; }
+.hero-dots { position: absolute; left: 0; right: 0; bottom: 10px; display: flex; justify-content: center; gap: 6px; z-index: 2; }
+.hero-dots button { width: 8px; height: 8px; padding: 0; border-radius: 50%; border: 0; background: rgba(255,255,255,.55); cursor: pointer; }
+.hero-dots button.is-active { background: var(--c-accent); transform: scale(1.25); }
+@media (prefers-reduced-motion: reduce) { .hero-photo-frame .hero-slide { transition: none; } }
