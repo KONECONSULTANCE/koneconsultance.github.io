@@ -105,3 +105,30 @@
 .hero-dots button { width: 8px; height: 8px; padding: 0; border-radius: 50%; border: 0; background: rgba(255,255,255,.55); cursor: pointer; }
 .hero-dots button.is-active { background: var(--c-accent); transform: scale(1.25); }
 @media (prefers-reduced-motion: reduce) { .hero-photo-frame .hero-slide { transition: none; } }
+
+/* Page « Cartographie des ONG » */
+.carto-hero { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.carto-logo { width: 180px; height: 180px; border-radius: 22px; background: #fff; padding: 8px; object-fit: contain; box-shadow: var(--shadow-card); }
+.carto-three { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.carto-num { display: inline-flex; width: 34px; height: 34px; border-radius: 50%; background: var(--c-accent); color: var(--c-on-accent); font-weight: 800; align-items: center; justify-content: center; margin-bottom: 10px; }
+.carto-three p, .pcu-grid .pcu-card > p { color: var(--c-text-soft); }
+.carto-three .pcu-meta { margin-bottom: 10px; }
+.carto-h3 { margin: 36px 0 14px; font-size: 1.15rem; }
+.carto-steps { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; padding: 0; margin: 0; }
+.carto-steps li { counter-increment: s; position: relative; background: var(--c-surface); border: 1px solid var(--c-line); border-radius: 14px; padding: 30px 12px 14px; text-align: center; font-size: .9rem; }
+.carto-steps li::before { content: counter(s); position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 26px; height: 26px; border-radius: 50%; background: var(--c-accent); color: var(--c-on-accent); font-weight: 800; font-size: .8rem; display: flex; align-items: center; justify-content: center; }
+.carto-steps strong { display: block; }
+.carto-steps span { color: var(--c-text-soft); font-size: .82rem; }
+.carto-note { margin-top: 26px; }
+.carto-shot { margin: 0 0 18px; }
+.carto-shot img { display: block; width: 100%; max-width: 980px; height: auto; border-radius: var(--radius-card); border: 1px solid var(--c-line); background: #fff; }
+.carto-shot figcaption { color: var(--c-text-faint); font-size: .85rem; margin-top: 8px; }
+.pcu-thumbs.carto-one { grid-template-columns: 1fr; }
+.pcu-thumbs.carto-one img { height: 220px; }
+.carto-form-text { color: var(--c-text-soft); margin: 0 0 16px; min-height: 110px; }
+@media (max-width: 860px) { .carto-hero { grid-template-columns: 1fr; } .carto-logo { width: 120px; height: 120px; order: -1; } .carto-steps { grid-template-columns: repeat(2, 1fr); gap: 22px 10px; } }
+
+.real-mosaic.mosaic-doc img { object-position: top left; background: #fff; }
+.real-mosaic.mosaic-doc { grid-template-rows: auto 1fr; }
+.real-mosaic.mosaic-doc img:first-child { height: auto; aspect-ratio: 1181 / 571; object-fit: cover; }
+.real-mosaic.mosaic-doc img:last-child { object-fit: contain; object-position: center; padding: 10px; }
