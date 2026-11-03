@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sidiconsulting.org/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sidiconsulting.org/en/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://sidiconsulting.org/</loc><priority>1.0</priority></url>
+  <url><loc>https://sidiconsulting.org/en/</loc><priority>1.0</priority></url>
+  <url><loc>https://sidiconsulting.org/expertises.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/expertises.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/realisations.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/realisations.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/dimitra.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/dimitra.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/profil.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/profil.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/references.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/references.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/ressources.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/ressources.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/en/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/pcu.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sidiconsulting.org/cartographie.html</loc><priority>0.8</priority></url>
 </urlset>

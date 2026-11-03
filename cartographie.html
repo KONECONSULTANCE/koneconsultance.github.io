@@ -16,28 +16,28 @@
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="pcu.css?v=4">
+<link rel="stylesheet" href="css/site.css?v=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="pcu-page">
-
+<a href="#main" class="skip-link">Aller au contenu principal</a>
 <header class="site-header" id="site-header">
   <div class="container">
     <a href="index.html" class="brand">
       <img class="brand-logo" src="assets/images/logo-emblem.webp" alt="Logo Sidi_Consulting" width="64" height="48">
       <span class="brand-text"><span class="brand-name">Sidi Koné</span>
-      <span class="brand-title">Consultant en développement, suivi-évaluation, renforcement des capacités et analyse des données</span></span>
+      <span class="brand-title">Consultant national indépendant</span></span>
     </a>
-    <nav class="main-nav pcu-nav" aria-label="Navigation de la page">
-      <ul>
-        <li><a href="#besoin">Le besoin</a></li>
-        <li><a href="#dispositif">Le dispositif</a></li>
-        <li><a href="#tableau">Tableau de bord</a></li>
-        <li><a href="#documents">Documents</a></li>
-      </ul>
-      <div class="nav-cta"><a href="index.html#realisations" class="btn btn-primary">← Retour au site</a></div>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <ul><li><a href="index.html">Accueil</a></li><li><a href="expertises.html">Expertises</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html" class="is-active" aria-current="page">Réalisations</a></li><li><a href="profil.html">Profil</a></li><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="contact.html">Contact</a></li></ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Me confier une mission</a></div>
     </nav>
+    <a href="en/realisations.html" class="lang-switch" aria-label="Switch to English version">EN</a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu de navigation"><span></span></button>
   </div>
 </header>
-
+<main id="main">
 <main id="main">
 
   <section class="pcu-hero">
@@ -47,7 +47,6 @@
         <h1>Cartographie des ONG <span>de la région de Bougouni</span></h1>
         <p class="pcu-lead">Un dispositif complet pour savoir <strong>qui fait quoi, où, quand, pour qui et avec quels partenaires</strong> : un formulaire à remplir hors ligne, une consolidation contrôlée, une base régionale et un tableau de bord dynamique.</p>
       </div>
-      <img class="carto-logo" src="cartographie-logo-crong.webp" alt="Logo de la Coordination régionale des ONG de Bougouni (CR-ONG)" width="220" height="220">
     </div>
     <div class="container">
       <ul class="pcu-stats" aria-label="Chiffres clés">
@@ -209,14 +208,30 @@
   </section>
 
 </main>
-
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-bottom" style="text-align:center">
-      <p>© 2026 Sidi Koné — <a href="index.html">sidiconsulting.org</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/images/logo-sidi-consulting.webp" alt="Logo Sidi_Consulting" width="220" height="197" loading="lazy">
+        <span class="brand-name">Sidi Koné</span>
+        <p>Consultant national indépendant — développement, action humanitaire, suivi-évaluation, SIG et data analytics. Bougouni, Mali.</p>
+      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="expertises.html">Expertises</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="profil.html">Profil</a></li><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:sidi.konem@gmail.com">sidi.konem@gmail.com</a></li>
+        <li><a href="mailto:sidi.kone@ymail.com">sidi.kone@ymail.com</a></li>
+        <li><a href="tel:+22378504967">+223 78 50 49 67</a></li>
+        <li><a href="tel:+22366630094">+223 66 63 00 94</a></li>
+        <li><a href="https://www.linkedin.com/in/sidi-koné-05b0162b6" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul></div>
     </div>
+    <div class="footer-bottom"><span>© <span id="current-year"></span> Sidi Koné. Tous droits réservés.</span><span>sidiconsulting.org</span></div>
   </div>
 </footer>
+<a class="fab-wa" href="https://wa.me/22378504967" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +223 78 50 49 67">WhatsApp</a>
+<a class="fab-cta" href="contact.html">Me confier une mission</a>
+<script src="js/main.js"></script>
+
 
 </body>
 </html>
