@@ -259,3 +259,25 @@
     });
   }
 })();
+
+/* Bandeau « Partager » (LinkedIn + copier le lien) */
+(function () {
+  "use strict";
+  var p = location.pathname;
+  if (/contact\.html$|apercu\.html$|\/partage\//.test(p)) return;
+  var main = document.getElementById("main"); if (!main) return;
+  var en = (document.documentElement.lang || "fr").indexOf("en") === 0;
+  var canon = document.querySelector('link[rel="canonical"]');
+  var url = (canon && canon.href) || (location.origin + location.pathname);
+  var bar = document.createElement("div"); bar.className = "share-bar";
+  var inner = '<div class="container share-bar-inner"><span>' + (en ? "Found this useful? Share it:" : "Cette page vous a intéressé ? Partagez-la :") + '</span>' +
+    '<a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url) + '">' + (en ? "Share on LinkedIn" : "Partager sur LinkedIn") + '</a>' +
+    '<button type="button" class="btn btn-outline share-copy">' + (en ? "Copy link" : "Copier le lien") + '</button></div>';
+  bar.innerHTML = inner; main.appendChild(bar);
+  var b = bar.querySelector(".share-copy");
+  b.addEventListener("click", function () {
+    function ok() { b.textContent = en ? "Link copied" : "Lien copié"; setTimeout(function () { b.textContent = en ? "Copy link" : "Copier le lien"; }, 2500); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(ok, function () { window.prompt("", url); }); }
+    else { window.prompt("", url); }
+  });
+})();
