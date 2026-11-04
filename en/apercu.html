@@ -97,7 +97,7 @@ if(q&&DOCS[q]){
   for(var i=1;i<=d.n;i++){h+='<img src="'+(EN?'../':'')+'apercu/'+q+'-'+i+'.webp" alt="'+esc(t)+' — '+(EN?'page ':'page ')+i+'" width="820" loading="'+(i==1?'eager':'lazy')+'" draggable="false">';}
   h+='</div><div class="apercu-note">'+(EN?'To protect the work of the people and organisations involved, the full document is shared on request. Send me a short message with the intended use and I will reply personally.':'Pour protéger le travail des personnes et des organisations concernées, le document complet est transmis sur demande. Envoyez-moi un court message en précisant l’usage prévu, je vous répondrai personnellement.')+'</div>';
   var link=contact+'?doc='+encodeURIComponent(t)+'#contact-form';
-  h+='<div class="apercu-actions"><a class="btn btn-primary" href="'+link+'">'+(EN?'Request the full document':'Demander le document complet')+'</a><a class="btn btn-outline" href="javascript:history.back()">'+(EN?'Back':'Retour')+'</a></div>';
+  h+='<div class="apercu-actions"><a class="btn btn-primary" href="'+link+'">'+(EN?'Request the full document':'Demander le document complet')+'</a><a class="btn btn-outline share-doc" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent('https://sidiconsulting.org/'+(EN?'en/':'')+'partage/'+q+'.html')+'">'+(EN?'Share on LinkedIn':'Partager sur LinkedIn')+'</a><a class="btn btn-outline" href="javascript:history.back()">'+(EN?'Back':'Retour')+'</a></div>';
   root.innerHTML=h;
   root.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
 }else{
