@@ -169,3 +169,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--c-green); }
 @media (min-width: 900px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }
 .hero-actions { gap: 10px; }
 .hero-actions .btn { padding: 12px 18px; }
+
+/* Bandeau de partage */
+.share-bar{background:#f3f5f2;border-top:1px solid #dfe5df;padding:1.1rem 0}
+.share-bar-inner{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;justify-content:center;color:#263746;font-size:.95rem}
+.share-bar .btn{padding:.45rem .95rem;font-size:.9rem}
