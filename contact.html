@@ -149,5 +149,12 @@
 <a class="fab-wa" href="https://wa.me/22378504967" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +223 78 50 49 67">WhatsApp</a>
 <a class="fab-cta" href="contact.html">Me confier une mission</a>
 <script src="js/main.js"></script>
+<script data-docprefill>
+(function(){try{var d=new URLSearchParams(location.search).get('doc');if(!d)return;
+var sel=document.getElementById('f-subject'),m=document.getElementById('f-message');
+if(sel){var o=document.createElement('option');o.textContent="Demande d’un document complet";sel.insertBefore(o,sel.firstChild);sel.value=o.textContent;}
+if(m&&!m.value){m.value="Bonjour,\n\nJe souhaite recevoir le document complet : « %s ».\nOrganisation / usage prévu : \n\nMerci.".replace('%s',d.replace(/[<>]/g,''));}
+var f=document.getElementById('contact-form');if(f&&f.scrollIntoView)setTimeout(function(){f.scrollIntoView({behavior:'smooth',block:'start'});},300);}catch(e){}})();
+</script>
 </body>
 </html>
