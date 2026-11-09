@@ -31,6 +31,32 @@
 <link rel="stylesheet" href="pcu.css?v=4">
 <link rel="stylesheet" href="css/site.css?v=1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://sidiconsulting.org/#sidi", "name": "Sidi Koné", "jobTitle": "Consultant national indépendant", "url": "https://sidiconsulting.org/", "email": "sidi.konem@gmail.com", "telephone": "+22378504967", "address": {"@type": "PostalAddress", "addressLocality": "Bougouni", "addressCountry": "ML"}, "sameAs": ["https://www.linkedin.com/in/sidi-koné-05b0162b6"], "knowsAbout": ["Suivi-évaluation", "Action humanitaire", "Sécurité alimentaire", "Systèmes d'information géographique", "Analyse de données", "Renforcement des capacités"]}, {"@type": "ProfessionalService", "name": "SIDI_CONSULTING", "url": "https://sidiconsulting.org/", "founder": {"@id": "https://sidiconsulting.org/#sidi"}, "areaServed": ["Mali", "Afrique de l'Ouest"], "email": "sidi.konem@gmail.com", "telephone": "+22378504967"}]}</script>
+<style id="pc-style">.pc{width:min(340px,100%)}
+.pc-frame{position:relative;border:2px solid #C9A24D;border-radius:18px;box-shadow:0 24px 60px rgba(8,16,40,.45),0 0 0 6px rgba(201,162,77,.12);background:#0E1B38;touch-action:pan-y}
+.pc-frame .pc-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease,transform 6s ease;transform:scale(1.03)}
+.pc-frame .pc-slide:first-child{position:absolute}
+.pc-frame .pc-slide.is-active{opacity:1;transform:scale(1)}
+.pc-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(14,27,56,.55);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transition:opacity .25s,background .25s;z-index:3;padding:0;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.pc-prev{left:10px}.pc-next{right:10px}
+.pc-frame:hover .pc-arrow,.pc-frame:focus-within .pc-arrow{opacity:1}
+.pc-arrow:hover{background:#C9A24D;color:#0E1B38}
+.pc-arrow:focus-visible,.pc-dot:focus-visible{outline:2px solid #E3C27A;outline-offset:2px}
+@media (hover:none){.pc-arrow{opacity:.85}}
+.pc-panel{margin-top:14px;background:#0E1B38;border-top:3px solid #C9A24D;border-radius:12px;padding:16px 18px 14px;color:#fff;box-shadow:0 12px 30px rgba(8,16,40,.35)}
+.pc-caps{position:relative;min-height:7.4em}
+.pc-cap{position:absolute;inset:0 0 auto 0;margin:0;font-family:Manrope,Inter,sans-serif;font-weight:700;font-size:1.02rem;line-height:1.32;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .6s ease .15s,transform .6s ease .15s;pointer-events:none}
+.pc-cap.is-active{opacity:1;transform:none;pointer-events:auto}
+.pc-rule{display:block;width:34px;height:2px;background:#E3C27A;margin-bottom:9px;transform-origin:left;transform:scaleX(0);transition:transform .7s ease .3s}
+.pc-cap.is-active .pc-rule{transform:scaleX(1)}
+.pc-nav{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.pc-count{font-size:.74rem;letter-spacing:.14em;color:#E3C27A;font-weight:700;font-variant-numeric:tabular-nums}
+.pc-dots{display:flex;gap:8px}
+.pc-dot{width:10px;height:10px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;transition:background .25s,transform .25s,width .25s}
+.pc-dot.is-active{background:#E3C27A;border-color:#E3C27A;width:24px;border-radius:6px}
+.pc .hero-photo-badge{margin-top:16px;max-width:none}
+@media (max-width:860px){.pc{width:min(300px,100%)}.pc-arrow{opacity:.9;width:34px;height:34px}}
+@media (prefers-reduced-motion:reduce){.pc-frame .pc-slide,.pc-cap,.pc-rule,.pc-dot,.pc-arrow{transition:none!important}.pc-frame .pc-slide{transform:none}.pc-cap{transform:none}}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Aller au contenu principal</a>
@@ -63,8 +89,7 @@
       <a href="contact.html" class="btn btn-outline">Me confier une mission</a>
     </div>
   </div>
-  <div class="hero-photo-wrap"><div class="hero-photo"><div class="hero-photo-frame"><img class="hero-slide is-active" src="assets/images/sidi-portrait.jpg" alt="Portrait de Sidi Koné, consultant national indépendant, en costume bleu marine" width="800" height="800"><img class="hero-slide" src="sidi-profil-1.webp" alt="Sidi Koné, autre portrait en costume bleu foncé et cravate bleue" width="800" height="800" loading="lazy"><img class="hero-slide" src="sidi-profil-2.webp" alt="Sidi Koné, autre portrait en costume beige et cravate marron" width="800" height="800" loading="lazy"><img class="hero-slide" src="sidi-profil-3.webp" alt="Sidi Koné, autre portrait en costume bleu marine, de face" width="800" height="800" loading="lazy"><img class="hero-slide" src="sidi-profil-4.webp" alt="Sidi Koné, autre portrait en costume gris et cravate grise" width="800" height="800" loading="lazy"></div>
-    <span class="hero-photo-badge">30 ans d'expérience professionnelle — Mali et Afrique de l'Ouest</span></div></div>
+  <div class="hero-photo-wrap"><div class="hero-photo pc" role="region" aria-roledescription="carousel" aria-label="Portraits de Sidi Koné"><div class="hero-photo-frame pc-frame"><img class="hero-slide pc-slide is-active" src="assets/images/portraits/sidi-pro-1.webp" srcset="assets/images/portraits/sidi-pro-1-600.webp 600w, assets/images/portraits/sidi-pro-1.webp 1000w" sizes="(max-width:860px) 300px, 340px" alt="Portrait professionnel de Sidi Koné — suivi-évaluation, analyse de données et SIG / cartographie" width="1000" height="1000" fetchpriority="high"><img class="hero-slide pc-slide" src="assets/images/portraits/sidi-pro-2.webp" srcset="assets/images/portraits/sidi-pro-2-600.webp 600w, assets/images/portraits/sidi-pro-2.webp 1000w" sizes="(max-width:860px) 300px, 340px" alt="Portrait professionnel de Sidi Koné — renforcement de capacités sur les approches de développement participatives et sensibles au genre" width="1000" height="1000" loading="lazy" aria-hidden="true"><img class="hero-slide pc-slide" src="assets/images/portraits/sidi-pro-3.webp" srcset="assets/images/portraits/sidi-pro-3-600.webp 600w, assets/images/portraits/sidi-pro-3.webp 1000w" sizes="(max-width:860px) 300px, 340px" alt="Portrait professionnel de Sidi Koné — appui à l'élaboration des plans, facilitation et conseil pour les processus de développement" width="1000" height="1000" loading="lazy" aria-hidden="true"><img class="hero-slide pc-slide" src="assets/images/portraits/sidi-pro-4.webp" srcset="assets/images/portraits/sidi-pro-4-600.webp 600w, assets/images/portraits/sidi-pro-4.webp 1000w" sizes="(max-width:860px) 300px, 340px" alt="Portrait professionnel de Sidi Koné — études diagnostiques environnementales et sociales" width="1000" height="1000" loading="lazy" aria-hidden="true"><button type="button" class="pc-arrow pc-prev" aria-label="Portrait précédent"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" class="pc-arrow pc-next" aria-label="Portrait suivant"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div><div class="pc-panel"><div class="pc-caps" aria-live="polite" aria-atomic="true"><p class="pc-cap is-active"><span class="pc-rule" aria-hidden="true"></span>Suivi-évaluation, analyse de données et SIG / cartographie</p><p class="pc-cap"><span class="pc-rule" aria-hidden="true"></span>Renforcement de capacités sur les approches de développement participatives et sensibles au genre</p><p class="pc-cap"><span class="pc-rule" aria-hidden="true"></span>Appui à l'élaboration des plans, facilitation et conseil pour les processus de développement</p><p class="pc-cap"><span class="pc-rule" aria-hidden="true"></span>Études diagnostiques environnementales et sociales</p></div><div class="pc-nav"><span class="pc-count" aria-hidden="true">01 / 04</span><div class="pc-dots"><button type="button" class="pc-dot is-active" aria-label="Afficher le portrait 1" data-i="0"></button><button type="button" class="pc-dot" aria-label="Afficher le portrait 2" data-i="1"></button><button type="button" class="pc-dot" aria-label="Afficher le portrait 3" data-i="2"></button><button type="button" class="pc-dot" aria-label="Afficher le portrait 4" data-i="3"></button></div></div></div><span class="hero-photo-badge">30 ans d'expérience professionnelle — Mali et Afrique de l'Ouest</span></div></div>
 </div></section>
 
 <section class="section proof"><div class="container"><div class="stats-grid">
@@ -149,28 +174,33 @@
 <a class="fab-wa" href="https://wa.me/22378504967" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +223 78 50 49 67">WhatsApp</a>
 <a class="fab-cta" href="contact.html">Me confier une mission</a>
 <script src="js/main.js"></script>
-<script>
-(function () {
-  var f = document.querySelector(".hero-photo-frame"); if (!f) return;
-  var slides = f.querySelectorAll(".hero-slide"); if (slides.length < 2) return;
-  var dots = document.createElement("div"); dots.className = "hero-dots";
-  var i = 0, t, reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function go(n) {
-    slides[i].classList.remove("is-active"); dots.children[i].classList.remove("is-active");
-    i = (n + slides.length) % slides.length;
-    slides[i].classList.add("is-active"); dots.children[i].classList.add("is-active");
+<script>(function(){
+  var root=document.querySelector(".pc"); if(!root) return;
+  var slides=root.querySelectorAll(".pc-slide"),caps=root.querySelectorAll(".pc-cap"),dots=root.querySelectorAll(".pc-dot"),
+      count=root.querySelector(".pc-count"),frame=root.querySelector(".pc-frame"),
+      reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,
+      i=0,timer=null,DELAY=5500,n=slides.length;
+  function go(k){
+    k=(k+n)%n; if(k===i) return;
+    slides[i].classList.remove("is-active");slides[i].setAttribute("aria-hidden","true");caps[i].classList.remove("is-active");dots[i].classList.remove("is-active");
+    i=k;
+    slides[i].classList.add("is-active");slides[i].removeAttribute("aria-hidden");caps[i].classList.add("is-active");dots[i].classList.add("is-active");
+    count.textContent="0"+(i+1)+" / 0"+n;
+    var nx=slides[(i+1)%n]; if(nx&&nx.loading==="lazy") nx.loading="eager";
   }
-  slides.forEach(function (s, k) {
-    var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "Photo " + (k + 1));
-    if (k === 0) b.className = "is-active";
-    b.addEventListener("click", function () { go(k); restart(); });
-    dots.appendChild(b);
-  });
-  f.appendChild(dots);
-  function start() { if (!reduce) t = setInterval(function () { go(i + 1); }, 4000); }
-  function restart() { clearInterval(t); start(); }
-  f.addEventListener("mouseenter", function () { clearInterval(t); });
-  f.addEventListener("mouseleave", restart);
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function start(){stop();if(!reduce&&!document.hidden) timer=setInterval(function(){go(i+1);},DELAY);}
+  root.querySelector(".pc-prev").addEventListener("click",function(){go(i-1);start();});
+  root.querySelector(".pc-next").addEventListener("click",function(){go(i+1);start();});
+  dots.forEach(function(d){d.addEventListener("click",function(){go(+d.getAttribute("data-i"));start();});});
+  root.addEventListener("mouseenter",stop);root.addEventListener("mouseleave",start);
+  root.addEventListener("focusin",stop);root.addEventListener("focusout",start);
+  root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"){go(i-1);start();}else if(e.key==="ArrowRight"){go(i+1);start();}});
+  var x0=null,y0=null;
+  frame.addEventListener("touchstart",function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY;stop();},{passive:true});
+  frame.addEventListener("touchend",function(e){if(x0===null) return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)) go(dx<0?i+1:i-1); start();},{passive:true});
+  document.addEventListener("visibilitychange",function(){document.hidden?stop():start();});
   start();
 })();
 </script><script>
