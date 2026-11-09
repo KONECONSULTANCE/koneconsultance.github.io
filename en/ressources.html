@@ -30,6 +30,10 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../pcu.css?v=4">
 <link rel="stylesheet" href="../css/site.css?v=1">
+<style id="ph-style">.ph-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.ph-photo{margin:0;width:230px}
+.ph-photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border:2px solid #C9A24D;border-radius:18px;box-shadow:0 18px 44px rgba(8,16,40,.4),0 0 0 6px rgba(201,162,77,.12);background:#0E1B38}
+@media (max-width:860px){.ph-grid{grid-template-columns:1fr;gap:22px}.ph-photo{order:-1;width:150px}}</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -49,11 +53,11 @@
   </div>
 </header>
 <main id="main">
-<section class="page-hero"><div class="container">
+<section class="page-hero"><div class="container ph-grid"><div class="ph-text">
   <span class="section-eyebrow">Resources</span>
   <h1>Documents: preview and full version on request</h1>
   <p>My CV and the documents that accompany my work.</p>
-</div></section>
+</div><figure class="ph-photo"><img src="../assets/images/portraits/sidi-pro-4-600.webp" alt="Professional portrait of Sidi Koné, independent national consultant" width="600" height="600" fetchpriority="high"></figure></div></section>
 <section class="section"><div class="container"><div class="services-grid"><article class="service-card reveal"><h3>Profile</h3><ul class="res-list"><li><a href="apercu.html?d=CV-Sidi-Kone">Curriculum vitae (preview)</a></li></ul></article>
 <article class="service-card reveal"><h3>PCU Dioïla</h3><ul class="res-list"><li><a href="../pcu.html#livrables">Final reports and maps of the 4 communes (in French)</a></li></ul></article>
 <article class="service-card reveal"><h3>Bougouni NGO mapping</h3><ul class="res-list"><li><a href="apercu.html?d=CRONG_Guide_Utilisateur_ONG">User guide (French)</a></li><li><a href="apercu.html?d=CRONG_Guide_Administration">Administration guide (French)</a></li><li><a href="apercu.html?d=CRONG_Rapport_Tests_et_Limites">Test report and limits (French)</a></li><li><a href="../CRONG_Formulaire_Cartographie_ONG.xlsx" download>Blank Excel form</a></li></ul></article>
