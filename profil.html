@@ -31,9 +31,11 @@
 <link rel="stylesheet" href="pcu.css?v=4">
 <link rel="stylesheet" href="css/site.css?v=1">
 <style id="ph-style">.ph-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-.ph-photo{margin:0;width:230px}
-.ph-photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border:2px solid #C9A24D;border-radius:18px;box-shadow:0 18px 44px rgba(8,16,40,.4),0 0 0 6px rgba(201,162,77,.12);background:#0E1B38}
-@media (max-width:860px){.ph-grid{grid-template-columns:1fr;gap:22px}.ph-photo{order:-1;width:150px}}</style>
+.ph-duo{margin:0;display:flex;gap:16px;align-items:flex-start;align-self:stretch}
+.ph-duo img{display:block;width:172px;height:auto;aspect-ratio:1/1;object-fit:cover;border:2px solid #C9A24D;border-radius:16px;box-shadow:0 18px 44px rgba(8,16,40,.4),0 0 0 5px rgba(201,162,77,.12);background:#0E1B38}
+.ph-duo img:first-child{margin-top:46px}
+.ph-duo img+img{width:138px;margin-top:-30px}
+@media (max-width:860px){.ph-grid{grid-template-columns:1fr;gap:22px}.ph-duo{order:-1;gap:10px;justify-content:space-between;max-width:300px}.ph-duo img{width:128px;border-radius:14px}.ph-duo img:first-child{margin-top:22px}.ph-duo img+img{width:104px;margin-top:-10px}}</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Aller au contenu principal</a>
@@ -57,7 +59,7 @@
   <span class="section-eyebrow">Profil</span>
   <h1>Trente ans de terrain, de la recherche agronomique à la coordination FAO</h1>
   <p>Un parcours continu vers des responsabilités croissantes, toujours au contact des communautés rurales.</p>
-</div><figure class="ph-photo"><img src="assets/images/portraits/sidi-pro-1-600.webp" alt="Portrait professionnel de Sidi Koné, consultant national indépendant" width="600" height="600" fetchpriority="high"></figure></div></section>
+</div><figure class="ph-duo"><img src="assets/images/portraits/sidi-pro-1-600.webp" alt="Portrait professionnel de Sidi Koné, consultant national indépendant, costume bordeaux" width="600" height="600" fetchpriority="high"><img src="assets/images/portraits/sidi-pro-3-600.webp" alt="Portrait professionnel de Sidi Koné, consultant national indépendant, costume bleu pétrole" width="600" height="600" fetchpriority="high"></figure></div></section>
 <section class="section" id="profil">
     <div class="container">
       <div class="profile-grid">
