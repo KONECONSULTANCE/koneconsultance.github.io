@@ -180,7 +180,7 @@
   var slides=root.querySelectorAll(".pc-slide"),caps=root.querySelectorAll(".pc-cap"),dots=root.querySelectorAll(".pc-dot"),
       count=root.querySelector(".pc-count"),frame=root.querySelector(".pc-frame"),
       reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,
-      i=0,timer=null,DELAY=5500,n=slides.length;
+      i=0,timer=null,DELAY=5500,n=slides.length,hov=false,kb=false;
   function go(k){
     k=(k+n)%n; if(k===i) return;
     slides[i].classList.remove("is-active");slides[i].setAttribute("aria-hidden","true");caps[i].classList.remove("is-active");dots[i].classList.remove("is-active");
@@ -190,12 +190,12 @@
     var nx=slides[(i+1)%n]; if(nx&&nx.loading==="lazy") nx.loading="eager";
   }
   function stop(){if(timer){clearInterval(timer);timer=null;}}
-  function start(){stop();if(!reduce&&!document.hidden) timer=setInterval(function(){go(i+1);},DELAY);}
+  function start(){stop();if(!reduce&&!document.hidden&&!hov&&!kb) timer=setInterval(function(){go(i+1);},DELAY);}
   root.querySelector(".pc-prev").addEventListener("click",function(){go(i-1);start();});
   root.querySelector(".pc-next").addEventListener("click",function(){go(i+1);start();});
   dots.forEach(function(d){d.addEventListener("click",function(){go(+d.getAttribute("data-i"));start();});});
-  root.addEventListener("mouseenter",stop);root.addEventListener("mouseleave",start);
-  root.addEventListener("focusin",stop);root.addEventListener("focusout",start);
+  root.addEventListener("mouseenter",function(){hov=true;stop();});root.addEventListener("mouseleave",function(){hov=false;start();});
+  root.addEventListener("focusin",function(e){try{kb=e.target.matches(":focus-visible");}catch(x){kb=false;}if(kb) stop();});root.addEventListener("focusout",function(){kb=false;start();});
   root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"){go(i-1);start();}else if(e.key==="ArrowRight"){go(i+1);start();}});
   var x0=null,y0=null;
   frame.addEventListener("touchstart",function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY;stop();},{passive:true});
@@ -210,5 +210,3 @@ var t=m[location.hash];if(t){location.replace(t);}})();
 </script>
 </body>
 </html>
-
-
